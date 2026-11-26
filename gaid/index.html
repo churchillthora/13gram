@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Гайд продавця 13GRAM: програма лояльності EASY SWAP">
+<title>Гайд продавця 13GRAM</title>
+<style>:root{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Повітря як на apple.com: білі й світло-сірі смуги на всю ширину, текст по центру лише в заголовках,
+   глибина від фону, а не від рамок. Єдиний колір: синій акцент. Пункти й нумерація як у першій версії. */
+:root {
+  --bg: #ffffff; --band: #f5f5f7; --tile: #ffffff; --tile-on-white: #f5f5f7;
+  --fg: #1d1d1f; --body: rgba(0,0,0,.8); --muted: #6e6e73; --hair: #d2d2d7;
+  --accent: #0071e3; --link: #0066cc; --accent-fg: #ffffff;
+  --ok: #1d8a4e; --no: #c2412d;
+  --chat: #dfe7d8; --bubble: #ffffff; --bubble-fg: #1d1d1f; --quote: #eaf2fb; --quote-bar: #3a8ee6;
+  --btn: rgba(0,0,0,.30); --btn-fg: #fff; --rkb: #e8e8ed; --rkb-fg: #1d1d1f; --mine: #e3f6d3;
+  --device: #1d1d1f; --nav: rgba(255,255,255,.72); --logo: invert(1);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, monospace;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #000000; --band: #161617; --tile: #1c1c1e; --tile-on-white: #1c1c1e;
+  --fg: #f5f5f7; --body: rgba(255,255,255,.86); --muted: #a1a1a6; --hair: #424245;
+  --accent: #2997ff; --link: #2997ff; --accent-fg: #000000; --ok: #4cc283; --no: #ff7b6b;
+  --chat: #0e1621; --bubble: #182533; --bubble-fg: #f1f1f1; --quote: #1f3247; --quote-bar: #5aa7f0;
+  --btn: rgba(255,255,255,.12); --btn-fg: #e9eef3; --rkb: #2c2c2e; --rkb-fg: #f5f5f7; --mine: #2b5278;
+  --device: #3a3a3c; --nav: rgba(22,22,23,.72); --logo: none; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #000000; --band: #161617; --tile: #1c1c1e; --tile-on-white: #1c1c1e;
+  --fg: #f5f5f7; --body: rgba(255,255,255,.86); --muted: #a1a1a6; --hair: #424245;
+  --accent: #2997ff; --link: #2997ff; --accent-fg: #000000; --ok: #4cc283; --no: #ff7b6b;
+  --chat: #0e1621; --bubble: #182533; --bubble-fg: #f1f1f1; --quote: #1f3247; --quote-bar: #5aa7f0;
+  --btn: rgba(255,255,255,.12); --btn-fg: #e9eef3; --rkb: #2c2c2e; --rkb-fg: #f5f5f7; --mine: #2b5278;
+  --device: #3a3a3c; --nav: rgba(22,22,23,.72); --logo: none; color-scheme: dark; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--body); font-family: var(--sans); font-size: 17px; line-height: 1.47;
+  letter-spacing: -0.022em; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--nav); }
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--nav);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hair); }
+nav.toc .wrap { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; height: 48px; align-items: center; }
+nav.toc a { flex: none; color: var(--fg); text-decoration: none; font-size: 12px; letter-spacing: -0.01em; opacity: .8; }
+nav.toc a:hover, nav.toc a:focus-visible { opacity: 1; color: var(--link); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.hero { text-align: center; padding-block: 64px 0; background: var(--bg); }
+.hero .logo { width: min(220px, 56%); height: auto; filter: var(--logo); }
+.eyebrow { display: block; font-size: 17px; font-weight: 600; color: var(--muted); margin: 18px 0 6px; letter-spacing: -0.022em; }
+.hero h1 { font-family: var(--display); font-size: clamp(40px, 7vw, 64px); font-weight: 600; line-height: 1.07; letter-spacing: -0.015em;
+  color: var(--fg); margin: 0; text-wrap: balance; }
+.hero p { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.33; color: var(--fg); max-width: 34ch; margin: 14px auto 0; text-wrap: balance; letter-spacing: -0.01em; }
+.hero .shot { margin: 40px auto 0; width: min(560px, 100%); }
+.hero .shot img { width: 100%; height: auto; border-radius: 12px; box-shadow: rgba(0,0,0,.22) 3px 5px 30px 0px; }
+.hero code { font-family: var(--mono); font-size: .9em; }
+main section { padding-block: 88px; }
+main section:nth-of-type(even) { background: var(--band); }
+main section:nth-of-type(even) .tile, main section:nth-of-type(even) .rules div, main section:nth-of-type(even) .day li,
+main section:nth-of-type(even) .example, main section:nth-of-type(even) .note, main section:nth-of-type(even) .say p { background: var(--tile); }
+@media (max-width: 734px) { main section { padding-block: 56px; } .hero { padding-block: 44px 0; } }
+h2 { font-family: var(--display); font-size: clamp(32px, 5vw, 48px); font-weight: 600; line-height: 1.08; letter-spacing: -0.012em;
+  color: var(--fg); margin: 0 auto 14px; text-align: center; max-width: 18ch; text-wrap: balance; }
+.sub { text-align: center; font-size: clamp(19px, 2.2vw, 21px); line-height: 1.38; color: var(--muted); max-width: 40ch; margin: 0 auto 44px; text-wrap: balance; }
+h3 { font-family: var(--display); font-size: 21px; font-weight: 600; line-height: 1.19; color: var(--fg); margin: 28px 0 12px; letter-spacing: -0.01em; }
+p { margin: 0 0 14px; max-width: 62ch; }
+b, strong { color: var(--fg); font-weight: 600; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 48px; align-items: start; }
+@media (max-width: 834px) { .split { grid-template-columns: 1fr; gap: 28px; } }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 16px; display: grid; gap: 14px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; }
+ol.steps > li::before { content: counter(s); font-size: 15px; font-weight: 600; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--fg); color: var(--bg); margin-top: -1px; }
+.day { display: grid; grid-template-columns: repeat(auto-fit, minmax(176px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: d; }
+.day li { counter-increment: d; background: var(--tile-on-white); border-radius: 12px; padding: 22px 20px; display: grid; gap: 6px; align-content: start; }
+.day li::before { content: counter(d); font-family: var(--display); font-weight: 600; font-size: 40px; line-height: 1; color: var(--fg); letter-spacing: -0.02em; }
+.day b { font-size: 17px; }
+.day span { color: var(--muted); font-size: 14px; line-height: 1.43; letter-spacing: -0.016em; }
+.note { background: var(--tile-on-white); border-radius: 12px; padding: 16px 18px; margin: 16px 0; max-width: 62ch; }
+.note b { display: block; margin-bottom: 2px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 8px; }
+.tile { background: var(--tile-on-white); border-radius: 12px; padding: 28px 26px; }
+.tile strong { display: block; font-family: var(--display); font-size: 24px; line-height: 1.17; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.012em; text-wrap: balance; }
+.tile p { margin: 0; }
+.lead { font-size: 21px; line-height: 1.38; color: var(--fg); max-width: 40ch; margin: 0 auto 28px; text-align: center; text-wrap: balance; }
+.k { font-family: var(--mono); font-size: 15px; background: var(--tile-on-white); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+main section:nth-of-type(even) .k { background: var(--tile); }
+.do, .dont { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; margin: 8px 0; max-width: 62ch; }
+.do::before { content: "✓"; color: var(--ok); font-weight: 700; }
+.dont::before { content: "✕"; color: var(--no); font-weight: 700; }
+figure.shot { margin: 0; display: grid; gap: 10px; }
+figure.shot img { width: 100%; height: auto; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px var(--hair); }
+figure.shot figcaption { font-size: 14px; line-height: 1.43; color: var(--muted); letter-spacing: -0.016em; }
+.pin { position: relative; }
+.pin::after { content: ""; position: absolute; left: var(--x); top: var(--y); width: var(--d, 7%); aspect-ratio: 1; translate: -50% -50%;
+  border: 3px solid var(--accent); border-radius: 50%; box-shadow: 0 0 0 6px rgba(0,113,227,.18); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .pin::after { animation: ping 2.4s var(--ease) infinite; }
+  @keyframes ping { 0%, 60%, 100% { box-shadow: 0 0 0 6px rgba(0,113,227,.18); } 30% { box-shadow: 0 0 0 14px rgba(0,113,227,.06); } }
+  html { scroll-behavior: smooth; }
+}
+.wide { margin: 8px 0 28px; display: grid; gap: 18px; }
+.chat { background: var(--chat); border-radius: 18px; padding: 14px; display: grid; gap: 8px; min-width: 0; }
+.msg { max-width: 360px; }
+.mine { justify-self: end; background: var(--mine); color: var(--bubble-fg); border-radius: 14px 14px 4px 14px; padding: 6px 11px; font-size: 14px; max-width: 80%; }
+.bubble { background: var(--bubble); color: var(--bubble-fg); border-radius: 14px 14px 14px 4px; overflow: hidden; box-shadow: 0 1px 1px rgba(0,0,0,.1); }
+.pic { display: block; width: 100%; height: auto; }
+.txt { padding: 8px 12px 10px; overflow-wrap: anywhere; font-size: 14px; line-height: 1.43; letter-spacing: -0.01em; }
+.txt blockquote { margin: 4px 0; padding: 4px 8px 4px 10px; background: var(--quote); border-left: 3px solid var(--quote-bar); border-radius: 4px; }
+.txt code { font-family: var(--mono); font-size: 12.5px; }
+.kb, .reply { display: grid; gap: 4px; margin-top: 4px; }
+.kbrow { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; }
+.btn { background: var(--btn); color: var(--btn-fg); border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 13px; font-weight: 600; }
+.rbtn { background: var(--rkb); color: var(--rkb-fg); border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 12.5px; }
+.flow { display: grid; gap: 16px; }
+.journey { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px 20px; }
+.phone { margin: 0; display: grid; grid-template-rows: auto 1fr; gap: 12px; min-width: 0; }
+.phone figcaption { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; align-items: center; font-weight: 600; font-size: 15px; color: var(--fg); letter-spacing: -0.016em; }
+.phone .n { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-fg); font-size: 13px; font-weight: 600; }
+.screen { border: 7px solid var(--device); border-radius: 34px; overflow: hidden; background: var(--chat); box-shadow: rgba(0,0,0,.12) 0 10px 30px; }
+.screen .chat { border-radius: 0; min-height: 100%; }
+.example { background: var(--tile-on-white); border-radius: 12px; padding: 18px 20px; margin: 16px 0; max-width: 62ch; font-variant-numeric: tabular-nums; }
+.example b { font-family: var(--mono); font-size: 15px; }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.rules div { background: var(--tile-on-white); border-radius: 12px; padding: 24px 22px; color: var(--muted); font-size: 15px; line-height: 1.4; }
+.rules strong { display: block; font-family: var(--display); font-weight: 600; font-size: 34px; line-height: 1.1; margin-bottom: 6px; color: var(--fg); letter-spacing: -0.02em; }
+dl.faq { margin: 0 auto; display: grid; gap: 0; max-width: 720px; }
+dl.faq div { padding: 20px 0; border-bottom: 1px solid var(--hair); }
+dl.faq div:last-child { border-bottom: 0; }
+dl.faq dt { font-weight: 600; color: var(--fg); font-size: 19px; letter-spacing: -0.016em; }
+dl.faq dd { margin: 6px 0 0; }
+.say { display: grid; gap: 12px; max-width: 720px; margin: 0 auto; }
+.say p { margin: 0; padding: 20px 22px; background: var(--tile-on-white); border-radius: 12px; font-size: 19px; line-height: 1.42; color: var(--fg); max-width: none; }
+@media print {
+  nav.toc, body::before { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  main section { padding-block: 40px; }
+  .chat, .phone, .day li, .tile, .rules div, figure.shot, ol.steps > li, dl.faq div { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .pin::after { animation: none; }
+}
+footer { padding-block: 28px 48px; color: var(--muted); font-size: 12px; line-height: 1.33; border-top: 1px solid var(--hair); }
+</style>
+
+<header class="hero"><div class="wrap">
+  <img class="logo" src="logo.png" alt="13GRAM" width="720" height="210">
+  <span class="eyebrow">Програма лояльності EASY SWAP</span>
+  <h1>Гайд продавця</h1>
+  <p>Усе, що потрібно на касі: від відкриття зміни до списання фішок у боті <code>@easygramus_bot</code>.</p>
+  <div class="shot"><img src="hero-card.png" alt="Карта клієнта 13GRAM: CHURCHILL, номер 000001" width="1000" height="625"></div>
+</div></header>
+
+<nav class="toc" aria-label="Розділи"><div class="wrap">
+  <a href="#navishcho">Навіщо</a><a href="#den">Твій день</a><a href="#vhid">Перший вхід</a><a href="#zmina">Зміна</a>
+  <a href="#kasa">Вхід у касу</a><a href="#pokupka">Покупка</a><a href="#spysannia">Списання</a><a href="#povernennia">Повернення</a>
+  <a href="#moia-zmina">Моя зміна</a><a href="#zakryty">Закрити зміну</a><a href="#klient">Шлях клієнта</a><a href="#faq">Ситуації</a><a href="#pravyla">Правила</a>
+</div></nav>
+
+<main>
+
+<section id="navishcho"><div class="wrap">
+  <h2>Навіщо нам програма лояльності</h2>
+  <p class="sub">Покупець з картою повертається. І повертається саме до тебе.</p>
+  <p class="lead">Найбільші мережі світу, від кав'ярень до АЗС і супермаркетів, тримаються на програмах лояльності. Залучити нового покупця коштує в рази дорожче, ніж повернути того, хто вже купував. Людина з картою йде туди, де на неї чекають фішки, а не до конкурента через дорогу.</p>
+  <div class="tiles">
+    <div class="tile"><strong>Це твої гроші</strong><p>Кожен клієнт з картою приносить повторні покупки на твою точку, а отже вищий виторг точки і кращі твої показники. Бот рахує, скільки нових клієнтів привів кожен продавець, і власник це бачить.</p></div>
+    <div class="tile"><strong>Карта кожному. Завжди.</strong><p>Навіть коли черга. Реєстрація займає 20 секунд і три натискання в Telegram.</p></div>
+    <div class="tile"><strong>Повернення браку гарантоване</strong><p>Брак повертаємо лише за чеком. Клієнт з картою отримує чек кожної покупки у свій Telegram і не загубить його. Без чека повернути не вийде. Скажи про це клієнту, і він охоче зареєструється.</p></div>
+  </div>
+</div></section>
+
+<section id="den"><div class="wrap">
+  <h2>Твій день за 5 кроків</h2>
+  <p class="sub">Кожен крок нижче розписано докладно.</p>
+  <ol class="day">
+    <li><b>Відкрий зміну в боті</b><span>«🟢 Відкрити зміну», потім твоя точка. До першого чека.</span></li>
+    <li><b>Увійди в касу штрихкодом</b><span>«🪪 Мій штрихкод» у боті, скан на екрані входу. Без логіна й пароля.</span></li>
+    <li><b>Кожна покупка з картою</b><span>F9 «Дисконт» у касі, сканер зчитує карту з екрана телефона клієнта.</span></li>
+    <li><b>Списуй фішки через бот</b><span>«🎯 Списати фішки», клієнт підтверджує в Telegram.</span></li>
+    <li><b>Закрий зміну в боті</b><span>«🔴 Закрити зміну» в кінці дня.</span></li>
+  </ol>
+</div></section>
+
+<section id="vhid"><div class="wrap">
+  <h2>Перший вхід у бот</h2>
+  <p class="sub">Один раз. Адміністратор уже додав тебе в продавці за номером телефону.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>Відкрий у Telegram <span class="k">@easygramus_bot</span> і натисни «Старт».</div></li>
+      <li><div>Натисни «📱 Поділитися номером». Номер має бути той самий, що ти дав адміністратору.</div></li>
+      <li><div>Бот відкриє меню продавця. Якщо бот вітає тебе як клієнта, напиши адміністратору: у списку продавців записано інший номер.</div></li>
+    </ol>
+  </div>
+  <div class="chat"><div class="mine">📱 Поділитися номером</div><div class="msg"><div class="bubble"><div class="txt">👋 Ольга Коваль, ви підключені як продавець. Точку оберете, коли відкриватимете зміну.</div></div><div class="reply"><div class="kbrow"><span class="rbtn">🟢 Відкрити зміну</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">👤 Я як клієнт</span><span class="rbtn">🪪 Мій штрихкод</span></div></div></div><div class="msg"><div class="bubble"><div class="txt">👋 Ольга Коваль. Меню продавця 👇</div></div><div class="reply"><div class="kbrow"><span class="rbtn">🟢 Відкрити зміну</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">👤 Я як клієнт</span><span class="rbtn">🪪 Мій штрихкод</span></div></div></div></div>
+  </div>
+</div></section>
+
+<section id="zmina"><div class="wrap">
+  <h2>Відкрити зміну</h2>
+  <p class="sub">Зміна починається в боті, до першого чека.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>Натисни «🟢 Відкрити зміну».</div></li>
+      <li><div>Обери свою точку. У списку лише точки твого регіону.</div></li>
+      <li><div>Готово: адміністратор регіону бачить, о котрій ти відкрився. У меню з'являться «🎯 Списати фішки» і «🔴 Закрити зміну».</div></li>
+    </ol>
+    <p class="do">Перейшов на іншу точку: відкрий зміну на новій, попередня закриється сама.</p>
+    <p class="dont">Не пробивай чеки без відкритої зміни: адміністратор бачить чеки без відкриття, а час відкриття потрапляє в статистику запізнень.</p>
+  </div>
+  <div class="flow">
+    <div class="chat"><div class="mine">🟢 Відкрити зміну</div><div class="msg"><div class="bubble"><div class="txt">🟢 На якій точці відкриваєте зміну?</div></div><div class="kb"><div class="kbrow"><span class="btn">ЖД</span><span class="btn">Кривалівка</span></div><div class="kbrow"><span class="btn">Літак</span><span class="btn">Сєдова</span></div><div class="kbrow"><span class="btn">ТРЦ Плазма</span></div><div class="kbrow"><span class="btn">❌ Скасувати</span></div></div></div></div>
+    <div class="chat"><div class="mine">ТРЦ Плазма</div><div class="msg"><div class="bubble"><div class="txt">🟢 Зміну відкрито: ТРЦ Плазма, 10:02. Гарної зміни!</div></div></div><div class="msg"><div class="bubble"><div class="txt">Меню продавця · 🟢 ТРЦ Плазма з 10:02 👇</div></div><div class="reply"><div class="kbrow"><span class="rbtn">🎯 Списати фішки</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">🔴 Закрити зміну</span><span class="rbtn">👤 Я як клієнт</span></div><div class="kbrow"><span class="rbtn">🪪 Мій штрихкод</span></div></div></div></div>
+  </div></div>
+</div></section>
+
+<section id="kasa"><div class="wrap">
+  <h2>Вхід у «Вікно касира»: тільки штрихкодом</h2>
+  <p class="sub">Після відкриття зміни входиш у касу DNTrade своїм особистим штрихкодом з бота.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>У боті натисни «🪪 Мій штрихкод». Бот надішле картинку зі штрихкодом.</div></li>
+      <li><div>На екрані входу DNTrade піднеси сканер до екрана свого телефона: сканер зчитає штрихкод. Якщо сканер не читає, введи цифри під штрихкодом.</div></li>
+      <li><div>Каса відкриється під твоїм ім'ям.</div></li>
+    </ol>
+    <p class="do">Скануєш свій штрихкод: кожен чек записується на тебе, і твої продажі, нові клієнти й фішки рахуються тобі.</p>
+    <p class="dont">Не натискай «Вхід за логіном і паролем» і не входь під чужим ім'ям: твої чеки підуть іншій людині, і в статистиці тебе не буде.</p>
+  </div>
+  <div class="flow">
+    <div class="chat"><div class="mine">🪪 Мій штрихкод</div><div class="msg"><div class="bubble"><img class="pic" src="seller-code.png" alt="Картинка з бота"><div class="txt">🪪 0000090000010: для входу у «Вікно касира»</div></div><div class="reply"><div class="kbrow"><span class="rbtn">🎯 Списати фішки</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">🔴 Закрити зміну</span><span class="rbtn">👤 Я як клієнт</span></div><div class="kbrow"><span class="rbtn">🪪 Мій штрихкод</span></div></div></div></div>
+    <figure class="shot"><img src="kasa-login.png" alt="Екран входу DNTrade зі штрихкодом і посиланням «Вхід за логіном і паролем»" width="508" height="471">
+      <figcaption>Екран входу DNTrade. Скануй сюди штрихкод з бота. Посилання «Вхід за логіном і паролем» внизу не використовуй.</figcaption></figure>
+  </div></div>
+</div></section>
+
+<section id="pokupka"><div class="wrap">
+  <h2>Кожна покупка</h2>
+  <p class="sub">Перше питання кожному клієнту: «Ви вже з нами в Telegram? Покажіть карту, нарахуємо фішки».</p>
+  <h3>Карта є: куди її вводити</h3>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>У «Вікні касира» в шапці чека натисни іконку картки «Дисконт (F9)» або клавішу <span class="k">F9</span>.</div></li>
+      <li><div>У вікні «Дисконт» піднеси сканер до екрана телефона клієнта: сканер зчитає штрихкод карти. Якщо сканер не читає, введи 6 цифр під штрихкодом.</div></li>
+      <li><div>Додай товари і пробий чек як завжди.</div></li>
+    </ol>
+    <p>Фішки нарахуються самі. Через 15–45 секунд клієнт отримає чек у Telegram: товари, сума і скільки фішок додалось.</p>
+  </div>
+  <div class="chat"><div class="msg"><div class="bubble"><div class="txt">🧾 <b>Дякуємо за покупку!</b><br>Казбет · 26.11, 18:07<br><br><blockquote>Вугілля Garden 1kg · 455 ₴<br>Тютюн Darkside 100 г × 2 · 520 ₴</blockquote><br>Разом: <b>975 ₴</b> · 💳 картка<br><br>🎯 <b>+48 фішок</b><br>Баланс: <b>148 фішок</b> = 148 ₴ знижки<br><br>💡 <i>Ще 25 ₴ у чеку, і було б 7 % фішками</i></div></div></div></div>
+  </div>
+  <div class="wide">
+    <figure class="shot"><div class="pin" style="--x:89.1%;--y:9.1%;--d:5.5%"><img src="kasa-chek.webp" alt="«Вікно касира» DNTrade: у шапці чека іконка картки з підказкою «Дисконт (F9)»" width="2000" height="1072"></div>
+      <figcaption>Крок 1. «Вікно касира»: синє коло показує іконку «Дисконт (F9)» у шапці чека.</figcaption></figure>
+    <figure class="shot"><img src="kasa-dyskont.png" alt="Вікно «Дисконт» з полем «Введіть номер картки або номер телефону»" width="1702" height="544">
+      <figcaption>Крок 2. Вікно «Дисконт»: зчитай сканером штрихкод з екрана телефона клієнта або введи 6 цифр карти.</figcaption></figure>
+  </div>
+  <div class="split"><div>
+    <h3>Карти ще немає</h3>
+    <ol class="steps">
+      <li><div>Попроси відкрити <span class="k">@easygramus_bot</span> і натиснути «Старт».</div></li>
+      <li><div>«📱 Поділитися номером» і «✅ Погоджуюсь». Карта прийде одразу.</div></li>
+      <li><div>Введи нову карту через F9 «Дисконт», як звичайно.</div></li>
+    </ol>
+  </div>
+  <div class="note"><b>Клієнт з'являється в DNTrade сам</b>Бот створює його з номером карти. Не заводь клієнтів у DNTrade вручну: так клієнт може потрапити не в ту категорію, наприклад зі знижкою, якої йому не належить.</div>
+  </div>
+</div></section>
+
+<section id="spysannia"><div class="wrap">
+  <h2>Списання фішок</h2>
+  <p class="sub">1 фішка = 1 ₴ знижки. До 50 % чека, кальяни фішками не оплачуються. Баланс клієнта ти не бачиш: бот сам рахує, скільки можна.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>«🎯 Списати фішки» і номер карти клієнта (або телефон).</div></li>
+      <li><div>Сума чека.</div></li>
+      <li><div>Сума кальянів у чеку або кнопка «Кальянів немає».</div></li>
+      <li><div>Скільки фішок списати, або кнопка «Максимум».</div></li>
+      <li><div>Клієнт отримує запит у Telegram і тисне «✅ Так, списати». Запит діє 5 хвилин.</div></li>
+      <li><div>Коли бот напише «✅ Списано»: F6 і ручна знижка на цю суму на весь чек, потім F9 «Дисконт» і карта клієнта, потім пробий чек.</div></li>
+    </ol>
+    <div class="example">Приклад: чек <b>5 000 ₴</b>, з них кальян <b>3 000 ₴</b>. Без кальяну 2 000 ₴, половина 1 000. Списати можна до <b>1 000 фішок</b>, якщо стільки є на балансі. Клієнт платить 4 000 ₴.</div>
+    <p class="do">Знижка в чеку рівно на списану суму, і карта клієнта в чеку. Тоді все зійдеться автоматично.</p>
+    <p class="dont">Якщо за 30 хвилин чека зі знижкою немає, бот поверне фішки клієнту, а адміністратор отримає повідомлення.</p>
+    <p class="dont">Знижка в чеку інша, ніж списали: ти й адміністратор отримаєте повідомлення про розбіжність.</p>
+    <p>У чеку зі списанням фішки не нараховуються. Клієнт відмовився або не встиг: просто створи новий запит.</p>
+  </div>
+  <div class="flow">
+    <div class="chat"><div class="mine">🎯 Списати фішки</div><div class="msg"><div class="bubble"><div class="txt">🎯 Списання фішок · ТРЦ Плазма<br>Введіть номер карти клієнта (цифри під штрихкодом) або телефон:</div></div><div class="kb"><div class="kbrow"><span class="btn">❌ Скасувати</span></div></div></div></div>
+    <div class="chat"><div class="mine">Кальянів немає</div><div class="msg"><div class="bubble"><div class="txt">За правилами можна списати до <b>500</b> фішок, але не більше, ніж є в клієнта. Скільки списати? «Максимум»: усі доступні.</div></div><div class="kb"><div class="kbrow"><span class="btn">Максимум</span></div><div class="kbrow"><span class="btn">❌ Скасувати</span></div></div></div></div>
+    <div class="chat"><div class="msg"><div class="bubble"><div class="txt">🎯 <b>Списати 120 фішок?</b><br>Знижка <b>120 ₴</b> · ТРЦ Плазма<br><br><blockquote>Зараз на балансі: 148<br>Після списання: 28</blockquote><br><i>Запит дійсний 5 хв</i></div></div><div class="kb"><div class="kbrow"><span class="btn">✅ Так, списати</span><span class="btn">❌ Ні</span></div></div></div></div>
+    <div class="chat"><div class="msg"><div class="bubble"><div class="txt">✅ <b>Списано 120 фішок</b><br>Тепер на касі:<br><br><blockquote>1. F6 → ручна знижка <b>120 ₴</b> на весь чек<br>2. Дисконтна карта → скан карти клієнта<br>3. Пробити чек</blockquote></div></div></div></div>
+  </div></div>
+</div></section>
+
+<section id="povernennia"><div class="wrap">
+  <h2>Повернення</h2>
+  <p class="sub">Бот сам розбереться з фішками.</p>
+  <div class="split"><div>
+    <p>Оформлюй повернення в DNTrade по чеку клієнта, як завжди. Бот сам зніме фішки, нараховані за повернений товар, і надішле клієнту повідомлення.</p>
+    <p>Якщо в цьому чеку списували фішки, списані фішки не повертаються.</p>
+    <p>Чек видалили в DNTrade: бот теж це побачить і зніме нараховані за нього фішки.</p>
+  </div>
+  <div class="chat"><div class="msg"><div class="bubble"><div class="txt">↩️ <b>Повернення</b><br>Казбет · 26.11, 18:07<br><br><blockquote>Тютюн Darkside 100 г · 260 ₴</blockquote><br>Разом: <b>260 ₴</b> · 💵 готівка<br><br>🎯 −13 фішок<br>Баланс: <b>135 фішок</b> = 135 ₴ знижки</div></div></div></div>
+  </div>
+</div></section>
+
+<section id="moia-zmina"><div class="wrap">
+  <h2>«📊 Моя зміна»: твоя аналітика</h2>
+  <p class="sub">Натискай будь-коли протягом дня.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div><b>Сума і кількість чеків</b>, готівка і картка окремо, повернення.</div></li>
+      <li><div><b>Середній чек і останній чек.</b></div></li>
+      <li><div><b>Нових клієнтів у боті:</b> скількох ти привів сьогодні і за весь час.</div></li>
+      <li><div><b>Нараховано фішок клієнтам</b> за твої чеки і <b>списано фішок</b> через тебе.</div></li>
+      <li><div><b>Ручні знижки:</b> чеки зі знижкою без списання фішок у боті. Адміністратор їх бачить.</div></li>
+    </ol>
+    <p>Чеки підтягуються щохвилини. Якщо чеків немає, а ти продавав, напиши адміністратору: можливо, в DNTrade тебе записано під іншим ім'ям.</p>
+  </div>
+  <div class="chat"><div class="mine">📊 Моя зміна</div><div class="msg"><div class="bubble"><div class="txt">📊 <b>Моя зміна · 26.11</b><br>🟢 ТРЦ Плазма · з 10:02<br><br><b>1 405 ₴</b> · 2 чеки<br>💵 Готівка: 430 ₴ · 💳 Картка: 975 ₴<br>Середній чек: 702 ₴<br>Останній: 15:20 · 430 ₴<br><br><blockquote>👥 Нових клієнтів у боті: сьогодні 0 · всього 0<br>➕ Нараховано фішок клієнтам: 0<br>🎯 Списано фішок: немає<br>✂️ Ручні знижки: немає</blockquote></div></div><div class="reply"><div class="kbrow"><span class="rbtn">🎯 Списати фішки</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">🔴 Закрити зміну</span><span class="rbtn">👤 Я як клієнт</span></div><div class="kbrow"><span class="rbtn">🪪 Мій штрихкод</span></div></div></div></div>
+  </div>
+</div></section>
+
+<section id="zakryty"><div class="wrap">
+  <h2>Закрити зміну</h2>
+  <p class="sub">В кінці дня, після останнього чека.</p>
+  <div class="split"><div>
+    <ol class="steps">
+      <li><div>Натисни «🔴 Закрити зміну».</div></li>
+      <li><div>Підтвердь «Так, закрити».</div></li>
+      <li><div>Бот покаже підсумок зміни, адміністратор регіону отримає його теж.</div></li>
+    </ol>
+    <h3>Купити собі</h3>
+    <p>«👤 Я як клієнт» відкриває твою карту клієнта: купуй і отримуй фішки, як усі. Повернутися: «↩️ Меню продавця». Зміна при цьому не закривається.</p>
+  </div>
+  <div class="chat"><div class="mine">🔴 Так, закрити</div><div class="msg"><div class="bubble"><div class="txt">🔴 <b>Зміну закрито</b> · ТРЦ Плазма · 10:02–21:05<br><br><b>1 405 ₴</b> · 2 чеки<br>💵 Готівка: 430 ₴ · 💳 Картка: 975 ₴<br><br>Куди далі?</div></div><div class="kb"><div class="kbrow"><span class="btn">🟢 Відкрити нову зміну</span></div><div class="kbrow"><span class="btn">👤 Меню клієнта</span></div></div></div><div class="msg"><div class="bubble"><div class="txt">Меню продавця 👇</div></div><div class="reply"><div class="kbrow"><span class="rbtn">🟢 Відкрити зміну</span><span class="rbtn">📊 Моя зміна</span></div><div class="kbrow"><span class="rbtn">👤 Я як клієнт</span><span class="rbtn">🪪 Мій штрихкод</span></div></div></div></div>
+  </div>
+</div></section>
+
+<section id="klient"><div class="wrap">
+  <h2>Шлях клієнта</h2>
+  <p class="sub">Так бачить програму покупець. Покажи йому перші три кроки, решта відбувається сама.</p>
+  <div class="journey"><figure class="phone"><figcaption><span class="n">1</span>Відкриває бота й тисне «Старт»</figcaption><div class="screen"><div class="chat"><div class="mine">/start</div><div class="msg"><div class="bubble"><div class="txt"><b>Вітаємо у 13GRAM</b> 👋<br>Карта лояльності EASY SWAP прямо тут, у Telegram.<br><br><blockquote>🎯 Фішки з кожної покупки<br>💸 1 фішка = 1 ₴ знижки<br>🧾 Чеки та історія в одному місці</blockquote><br>Натисніть кнопку нижче, щоб отримати карту 👇</div></div><div class="reply"><div class="kbrow"><span class="rbtn">📱 Поділитися номером</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">2</span>Ділиться номером і погоджується</figcaption><div class="screen"><div class="chat"><div class="mine">📱 Поділитися номером</div><div class="msg"><div class="bubble"><div class="txt"><b>Ще один крок</b></div></div></div><div class="msg"><div class="bubble"><div class="txt"><blockquote>Натискаючи «Погоджуюсь», ви підтверджуєте, що вам є 18 років, і погоджуєтесь на обробку даних.</blockquote></div></div><div class="kb"><div class="kbrow"><span class="btn">✅ Погоджуюсь, мені є 18</span></div><div class="kbrow"><span class="btn">❌ Ні</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">3</span>Отримує карту</figcaption><div class="screen"><div class="chat"><div class="mine">✅ Погоджуюсь, мені є 18</div><div class="msg"><div class="bubble"><div class="txt">🎉 <b>Готово! Ми знайшли вас у базі 13GRAM</b></div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div><div class="msg"><div class="bubble"><img class="pic" src="card.png" alt="Картинка з бота"><div class="txt">💳 <b>Ваша карта · 000001</b><br>Покажіть штрихкод на касі або назвіть номер.</div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">4</span>На касі показує карту</figcaption><div class="screen"><div class="chat"><div class="mine">💳 Карта клієнта</div><div class="msg"><div class="bubble"><img class="pic" src="card.png" alt="Картинка з бота"><div class="txt">💳 <b>Ваша карта · 000007</b><br>Покажіть штрихкод на касі або назвіть номер.</div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">5</span>Чек і фішки приходять самі</figcaption><div class="screen"><div class="chat"><div class="msg"><div class="bubble"><div class="txt">🧾 <b>Дякуємо за покупку!</b><br>Казбет · 26.11, 18:07<br><br><blockquote>Вугілля Garden 1kg · 455 ₴<br>Тютюн Darkside 100 г × 2 · 520 ₴</blockquote><br>Разом: <b>975 ₴</b> · 💳 картка<br><br>🎯 <b>+48 фішок</b><br>Баланс: <b>148 фішок</b> = 148 ₴ знижки<br><br>💡 <i>Ще 25 ₴ у чеку, і було б 7 % фішками</i></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">6</span>Перевіряє баланс</figcaption><div class="screen"><div class="chat"><div class="mine">🎯 Баланс фішок</div><div class="msg"><div class="bubble"><div class="txt">🎯 <b>148 фішок</b><br>= 148 ₴ знижки<br><br><blockquote>Оплатити фішками можна до 50 % чека.</blockquote><br>👉 На касі скажіть продавцю, скільки фішок списати.</div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">7</span>Підтверджує списання</figcaption><div class="screen"><div class="chat"><div class="msg"><div class="bubble"><div class="txt">🎯 <b>Списати 120 фішок?</b><br>Знижка <b>120 ₴</b> · ТРЦ Плазма<br><br><blockquote>Зараз на балансі: 148<br>Після списання: 28</blockquote><br><i>Запит дійсний 5 хв</i></div></div><div class="kb"><div class="kbrow"><span class="btn">✅ Так, списати</span><span class="btn">❌ Ні</span></div></div></div></div></div></figure><figure class="phone"><figcaption><span class="n">8</span>Бачить усі покупки</figcaption><div class="screen"><div class="chat"><div class="mine">🧾 Історія покупок</div><div class="msg"><div class="bubble"><div class="txt">🧾 <b>Ваші покупки</b><br><br>📦 <b>26.11</b> · 18:07 · Казбет<br>975 ₴ · 💳 картка · 🎯 +48<br><br>📦 <b>22.11</b> · 12:40 · Казбет<br>455 ₴ · 💵 готівка · 🎯 +22<br><br><i>Натисніть на чек, щоб відкрити його.</i></div></div><div class="kb"><div class="kbrow"><span class="btn">🧾 26.11 · Казбет · 975 ₴</span></div><div class="kbrow"><span class="btn">🧾 22.11 · Казбет · 455 ₴</span></div></div></div></div></div></figure></div>
+</div></section>
+
+<section id="say"><div class="wrap">
+  <h2>Що сказати клієнту</h2>
+  <p class="sub">Три фрази, які працюють.</p>
+  <div class="say">
+    <p>«У нас є карта лояльності в Telegram: з кожної покупки фішки, 1 фішка = 1 гривня знижки. Реєстрація 20 секунд».</p>
+    <p>«Чек кожної покупки приходить вам у Telegram. Якщо трапиться брак, повернемо без проблем. Без чека повернути не вийде».</p>
+    <p>«Фішками можна оплатити до половини наступної покупки».</p>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Часті ситуації</h2>
+  <p class="sub">Коротко, що робити.</p>
+  <dl class="faq">
+    <div><dt>Сканер не читає штрихкод клієнта</dt><dd>Введи 6 цифр під штрихкодом у вікні «Дисконт» (F9).</dd></div>
+    <div><dt>Забув ввести карту, чек уже пробито</dt><dd>Фішки за цей чек не нарахуються. Скажи адміністратору: він нарахує їх вручну.</dd></div>
+    <div><dt>Клієнт каже, що чек не прийшов</dt><dd>Чек приходить протягом хвилини. Перевір, що в чеку була його карта. Якщо клієнт заблокував бота, повідомлення не дійде.</dd></div>
+    <div><dt>У клієнта немає Telegram</dt><dd>Пробий покупку без карти. Запропонуй зареєструватися наступного разу.</dd></div>
+    <div><dt>Бот пише «Сервіс тимчасово недоступний»</dt><dd>DNTrade не відповідає. Почекай кілька хвилин. Фішки за всі чеки нарахуються самі, щойно зв'язок повернеться.</dd></div>
+    <div><dt>Бот пише «Кнопка застаріла»</dt><dd>Натисни /start або кнопку меню і повтори дію.</dd></div>
+    <div><dt>Клієнт хоче списати більше, ніж дозволяє бот</dt><dd>Максимум: половина чека без кальянів і не більше, ніж є на балансі. Більше списати не можна.</dd></div>
+    <div><dt>Переходжу на іншу точку посеред дня</dt><dd>«🟢 Відкрити зміну» на новій точці. Попередня зміна закриється сама.</dd></div>
+  </dl>
+</div></section>
+
+<section id="pravyla"><div class="wrap">
+  <h2>Правила коротко</h2>
+  <p class="sub">Усе, що варто пам'ятати.</p>
+  <div class="rules">
+    <div><strong>2 %</strong>з чека до 400 ₴</div>
+    <div><strong>3 %</strong>з чека понад 400 ₴</div>
+    <div><strong>5 %</strong>з чека понад 600 ₴</div>
+    <div><strong>1 фішка = 1 ₴</strong>знижки на наступну покупку</div>
+    <div><strong>до 50 %</strong>чека можна оплатити фішками, крім кальянів</div>
+    <div><strong>6 цифр</strong>номер карти клієнта, під штрихкодом</div>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="wrap">Питання щодо бота: адміністратор твого регіону. Тексти повідомлень у гайді взято з робочого бота, імена та суми для прикладу.</div></footer>
+
+</body>
+</html>
