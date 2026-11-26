@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Перехід клієнтів зі старого бота 13GramBot у новий @easygramus_bot">
+<title>Перехід у новий бот 13GRAM</title>
+<style>:root{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Повітря як на apple.com: білі й світло-сірі смуги на всю ширину, текст по центру лише в заголовках,
+   глибина від фону, а не від рамок. Єдиний колір: синій акцент. Пункти й нумерація як у першій версії. */
+:root {
+  --bg: #ffffff; --band: #f5f5f7; --tile: #ffffff; --tile-on-white: #f5f5f7;
+  --fg: #1d1d1f; --body: rgba(0,0,0,.8); --muted: #6e6e73; --hair: #d2d2d7;
+  --accent: #0071e3; --link: #0066cc; --accent-fg: #ffffff;
+  --ok: #1d8a4e; --no: #c2412d;
+  --chat: #dfe7d8; --bubble: #ffffff; --bubble-fg: #1d1d1f; --quote: #eaf2fb; --quote-bar: #3a8ee6;
+  --btn: rgba(0,0,0,.30); --btn-fg: #fff; --rkb: #e8e8ed; --rkb-fg: #1d1d1f; --mine: #e3f6d3;
+  --device: #1d1d1f; --nav: rgba(255,255,255,.72); --logo: invert(1);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "SF Mono", SFMono-Regular, ui-monospace, Menlo, Monaco, monospace;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #000000; --band: #161617; --tile: #1c1c1e; --tile-on-white: #1c1c1e;
+  --fg: #f5f5f7; --body: rgba(255,255,255,.86); --muted: #a1a1a6; --hair: #424245;
+  --accent: #2997ff; --link: #2997ff; --accent-fg: #000000; --ok: #4cc283; --no: #ff7b6b;
+  --chat: #0e1621; --bubble: #182533; --bubble-fg: #f1f1f1; --quote: #1f3247; --quote-bar: #5aa7f0;
+  --btn: rgba(255,255,255,.12); --btn-fg: #e9eef3; --rkb: #2c2c2e; --rkb-fg: #f5f5f7; --mine: #2b5278;
+  --device: #3a3a3c; --nav: rgba(22,22,23,.72); --logo: none; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #000000; --band: #161617; --tile: #1c1c1e; --tile-on-white: #1c1c1e;
+  --fg: #f5f5f7; --body: rgba(255,255,255,.86); --muted: #a1a1a6; --hair: #424245;
+  --accent: #2997ff; --link: #2997ff; --accent-fg: #000000; --ok: #4cc283; --no: #ff7b6b;
+  --chat: #0e1621; --bubble: #182533; --bubble-fg: #f1f1f1; --quote: #1f3247; --quote-bar: #5aa7f0;
+  --btn: rgba(255,255,255,.12); --btn-fg: #e9eef3; --rkb: #2c2c2e; --rkb-fg: #f5f5f7; --mine: #2b5278;
+  --device: #3a3a3c; --nav: rgba(22,22,23,.72); --logo: none; color-scheme: dark; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--body); font-family: var(--sans); font-size: 17px; line-height: 1.47;
+  letter-spacing: -0.022em; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--nav); }
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--nav);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--hair); }
+nav.toc .wrap { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; height: 48px; align-items: center; }
+nav.toc a { flex: none; color: var(--fg); text-decoration: none; font-size: 12px; letter-spacing: -0.01em; opacity: .8; }
+nav.toc a:hover, nav.toc a:focus-visible { opacity: 1; color: var(--link); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.hero { text-align: center; padding-block: 64px 0; background: var(--bg); }
+.hero .logo { width: min(220px, 56%); height: auto; filter: var(--logo); }
+.eyebrow { display: block; font-size: 17px; font-weight: 600; color: var(--muted); margin: 18px 0 6px; letter-spacing: -0.022em; }
+.hero h1 { font-family: var(--display); font-size: clamp(40px, 7vw, 64px); font-weight: 600; line-height: 1.07; letter-spacing: -0.015em;
+  color: var(--fg); margin: 0; text-wrap: balance; }
+.hero p { font-size: clamp(19px, 2.4vw, 24px); line-height: 1.33; color: var(--fg); max-width: 34ch; margin: 14px auto 0; text-wrap: balance; letter-spacing: -0.01em; }
+.hero .shot { margin: 40px auto 0; width: min(560px, 100%); }
+.hero .shot img { width: 100%; height: auto; border-radius: 12px; box-shadow: rgba(0,0,0,.22) 3px 5px 30px 0px; }
+.hero code { font-family: var(--mono); font-size: .9em; }
+main section { padding-block: 88px; }
+main section:nth-of-type(even) { background: var(--band); }
+main section:nth-of-type(even) .tile, main section:nth-of-type(even) .rules div, main section:nth-of-type(even) .day li,
+main section:nth-of-type(even) .example, main section:nth-of-type(even) .note, main section:nth-of-type(even) .say p { background: var(--tile); }
+@media (max-width: 734px) { main section { padding-block: 56px; } .hero { padding-block: 44px 0; } }
+h2 { font-family: var(--display); font-size: clamp(32px, 5vw, 48px); font-weight: 600; line-height: 1.08; letter-spacing: -0.012em;
+  color: var(--fg); margin: 0 auto 14px; text-align: center; max-width: 18ch; text-wrap: balance; }
+.sub { text-align: center; font-size: clamp(19px, 2.2vw, 21px); line-height: 1.38; color: var(--muted); max-width: 40ch; margin: 0 auto 44px; text-wrap: balance; }
+h3 { font-family: var(--display); font-size: 21px; font-weight: 600; line-height: 1.19; color: var(--fg); margin: 28px 0 12px; letter-spacing: -0.01em; }
+p { margin: 0 0 14px; max-width: 62ch; }
+b, strong { color: var(--fg); font-weight: 600; }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 48px; align-items: start; }
+@media (max-width: 834px) { .split { grid-template-columns: 1fr; gap: 28px; } }
+ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0 0 16px; display: grid; gap: 14px; }
+ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; }
+ol.steps > li::before { content: counter(s); font-size: 15px; font-weight: 600; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--fg); color: var(--bg); margin-top: -1px; }
+.day { display: grid; grid-template-columns: repeat(auto-fit, minmax(176px, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; counter-reset: d; }
+.day li { counter-increment: d; background: var(--tile-on-white); border-radius: 12px; padding: 22px 20px; display: grid; gap: 6px; align-content: start; }
+.day li::before { content: counter(d); font-family: var(--display); font-weight: 600; font-size: 40px; line-height: 1; color: var(--fg); letter-spacing: -0.02em; }
+.day b { font-size: 17px; }
+.day span { color: var(--muted); font-size: 14px; line-height: 1.43; letter-spacing: -0.016em; }
+.note { background: var(--tile-on-white); border-radius: 12px; padding: 16px 18px; margin: 16px 0; max-width: 62ch; }
+.note b { display: block; margin-bottom: 2px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 8px; }
+.tile { background: var(--tile-on-white); border-radius: 12px; padding: 28px 26px; }
+.tile strong { display: block; font-family: var(--display); font-size: 24px; line-height: 1.17; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.012em; text-wrap: balance; }
+.tile p { margin: 0; }
+.lead { font-size: 21px; line-height: 1.38; color: var(--fg); max-width: 40ch; margin: 0 auto 28px; text-align: center; text-wrap: balance; }
+.k { font-family: var(--mono); font-size: 15px; background: var(--tile-on-white); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+main section:nth-of-type(even) .k { background: var(--tile); }
+.do, .dont { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; margin: 8px 0; max-width: 62ch; }
+.do::before { content: "✓"; color: var(--ok); font-weight: 700; }
+.dont::before { content: "✕"; color: var(--no); font-weight: 700; }
+figure.shot { margin: 0; display: grid; gap: 10px; }
+figure.shot img { width: 100%; height: auto; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px var(--hair); }
+figure.shot figcaption { font-size: 14px; line-height: 1.43; color: var(--muted); letter-spacing: -0.016em; }
+.pin { position: relative; }
+.pin::after { content: ""; position: absolute; left: var(--x); top: var(--y); width: var(--d, 7%); aspect-ratio: 1; translate: -50% -50%;
+  border: 3px solid var(--accent); border-radius: 50%; box-shadow: 0 0 0 6px rgba(0,113,227,.18); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .pin::after { animation: ping 2.4s var(--ease) infinite; }
+  @keyframes ping { 0%, 60%, 100% { box-shadow: 0 0 0 6px rgba(0,113,227,.18); } 30% { box-shadow: 0 0 0 14px rgba(0,113,227,.06); } }
+  html { scroll-behavior: smooth; }
+}
+.wide { margin: 8px 0 28px; display: grid; gap: 18px; }
+.chat { background: var(--chat); border-radius: 18px; padding: 14px; display: grid; gap: 8px; min-width: 0; }
+.msg { max-width: 360px; }
+.mine { justify-self: end; background: var(--mine); color: var(--bubble-fg); border-radius: 14px 14px 4px 14px; padding: 6px 11px; font-size: 14px; max-width: 80%; }
+.bubble { background: var(--bubble); color: var(--bubble-fg); border-radius: 14px 14px 14px 4px; overflow: hidden; box-shadow: 0 1px 1px rgba(0,0,0,.1); }
+.pic { display: block; width: 100%; height: auto; }
+.txt { padding: 8px 12px 10px; overflow-wrap: anywhere; font-size: 14px; line-height: 1.43; letter-spacing: -0.01em; }
+.txt blockquote { margin: 4px 0; padding: 4px 8px 4px 10px; background: var(--quote); border-left: 3px solid var(--quote-bar); border-radius: 4px; }
+.txt code { font-family: var(--mono); font-size: 12.5px; }
+.kb, .reply { display: grid; gap: 4px; margin-top: 4px; }
+.kbrow { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; }
+.btn { background: var(--btn); color: var(--btn-fg); border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 13px; font-weight: 600; }
+.rbtn { background: var(--rkb); color: var(--rkb-fg); border-radius: 8px; padding: 6px 8px; text-align: center; font-size: 12.5px; }
+.flow { display: grid; gap: 16px; }
+.journey { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px 20px; }
+.phone { margin: 0; display: grid; grid-template-rows: auto 1fr; gap: 12px; min-width: 0; }
+.phone figcaption { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; align-items: center; font-weight: 600; font-size: 15px; color: var(--fg); letter-spacing: -0.016em; }
+.phone .n { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-fg); font-size: 13px; font-weight: 600; }
+.screen { border: 7px solid var(--device); border-radius: 34px; overflow: hidden; background: var(--chat); box-shadow: rgba(0,0,0,.12) 0 10px 30px; }
+.screen .chat { border-radius: 0; min-height: 100%; }
+.example { background: var(--tile-on-white); border-radius: 12px; padding: 18px 20px; margin: 16px 0; max-width: 62ch; font-variant-numeric: tabular-nums; }
+.example b { font-family: var(--mono); font-size: 15px; }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.rules div { background: var(--tile-on-white); border-radius: 12px; padding: 24px 22px; color: var(--muted); font-size: 15px; line-height: 1.4; }
+.rules strong { display: block; font-family: var(--display); font-weight: 600; font-size: 34px; line-height: 1.1; margin-bottom: 6px; color: var(--fg); letter-spacing: -0.02em; }
+dl.faq { margin: 0 auto; display: grid; gap: 0; max-width: 720px; }
+dl.faq div { padding: 20px 0; border-bottom: 1px solid var(--hair); }
+dl.faq div:last-child { border-bottom: 0; }
+dl.faq dt { font-weight: 600; color: var(--fg); font-size: 19px; letter-spacing: -0.016em; }
+dl.faq dd { margin: 6px 0 0; }
+.say { display: grid; gap: 12px; max-width: 720px; margin: 0 auto; }
+.say p { margin: 0; padding: 20px 22px; background: var(--tile-on-white); border-radius: 12px; font-size: 19px; line-height: 1.42; color: var(--fg); max-width: none; }
+@media print {
+  nav.toc, body::before { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  main section { padding-block: 40px; }
+  .chat, .phone, .day li, .tile, .rules div, figure.shot, ol.steps > li, dl.faq div { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  .pin::after { animation: none; }
+}
+footer { padding-block: 28px 48px; color: var(--muted); font-size: 12px; line-height: 1.33; border-top: 1px solid var(--hair); }
+
+.marks { position: relative; }
+.marks .m { position: absolute; left: var(--x); top: var(--y); width: var(--w); height: var(--h); translate: -50% -50%;
+  border: 3px solid var(--accent); border-radius: 12px; box-shadow: 0 0 0 6px rgba(0,113,227,.18); pointer-events: none; }
+.marks .m b { position: absolute; left: -12px; top: -14px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: var(--accent-fg); font-size: 13px; font-weight: 600; }
+.qr { width: min(360px, 100%); margin: 0 auto; display: grid; gap: 12px; text-align: center; }
+.qr img { width: 100%; height: auto; border-radius: 18px; box-shadow: rgba(0,0,0,.22) 3px 5px 30px 0px; background: #fff; }
+.qr a { color: var(--link); text-decoration: none; font-size: 17px; }
+.qr a:hover { text-decoration: underline; }
+.template { font-family: var(--mono); font-size: 15px; line-height: 1.6; background: var(--tile-on-white); border-radius: 12px; padding: 18px 20px;
+  white-space: pre-wrap; overflow-wrap: anywhere; max-width: 62ch; color: var(--fg); }
+main section:nth-of-type(even) .template { background: var(--tile); }
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+@media (max-width: 834px) { .cols { grid-template-columns: 1fr; gap: 28px; } }
+</style>
+
+<header class="hero"><div class="wrap">
+  <img class="logo" src="../gaid/logo.png" alt="13GRAM" width="720" height="210">
+  <span class="eyebrow">Програма лояльності EASY SWAP</span>
+  <h1>Перехід у новий бот</h1>
+  <p>Старий бот 13GramBot скоро перестане працювати. Переводимо кожного клієнта в <code>@easygramus_bot</code> і переносимо його фішки.</p>
+  <div class="shot" style="width:min(320px,80%)"><img src="qr-card.jpg" alt="QR-код нового бота @easygramus_bot" width="730" height="750"></div>
+</div></header>
+
+<nav class="toc" aria-label="Розділи"><div class="wrap">
+  <a href="#chomu">Чому</a><a href="#kroky">Кроки</a><a href="#staryi">Старий бот</a><a href="#novyi">Новий бот</a>
+  <a href="#zvit">Що надіслати</a><a href="#skazaty">Що сказати</a><a href="#faq">Ситуації</a><a href="../gaid/">Гайд продавця</a>
+</div></nav>
+
+<main>
+
+<section id="chomu"><div class="wrap">
+  <h2>Кожен клієнт старого бота має перейти</h2>
+  <p class="sub">Після вимкнення старого бота клієнт не побачить свої фішки, якщо не перейде.</p>
+  <div class="tiles">
+    <div class="tile"><strong>Фішки не пропадуть</strong><p>Баланс зі старого бота переносимо в новий вручну. Клієнт нічого не втрачає, а отримує карту в Telegram, чеки й історію покупок.</p></div>
+    <div class="tile"><strong>Запитуй кожного</strong><p>Бачиш на касі старий бот або клієнт згадує фішки: одразу пропонуй перейти. Займає хвилину.</p></div>
+    <div class="tile"><strong>Новий клієнт рахується тобі</strong><p>Перша покупка з новою картою зараховує клієнта тобі в «👥 нових клієнтів» у статистиці.</p></div>
+  </div>
+</div></section>
+
+<section id="kroky"><div class="wrap">
+  <h2>Перехід за 5 кроків</h2>
+  <p class="sub">Нижче кожен крок з картинками.</p>
+  <ol class="day">
+    <li><b>Старий бот: ID і баланс</b><span>Клієнт показує «Ваш ID» і «Мої фішки 👀».</span></li>
+    <li><b>QR нового бота</b><span>Клієнт сканує QR камерою телефона або відкриває посилання.</span></li>
+    <li><b>Реєстрація</b><span>«Старт», «📱 Поділитися номером», «✅ Погоджуюсь». Карта приходить одразу.</span></li>
+    <li><b>Надішли дані</b><span>Старий ID, баланс і нова карта адміністратору за шаблоном.</span></li>
+    <li><b>Фішки нараховано</b><span>Адміністратор переносить баланс, клієнт отримує повідомлення в новому боті.</span></li>
+  </ol>
+</div></section>
+
+<section id="staryi"><div class="wrap">
+  <h2>Старий бот: ID клієнта і баланс</h2>
+  <p class="sub">Спочатку перепиши два числа зі старого бота 13GramBot.</p>
+  <div class="cols"><div>
+    <ol class="steps">
+      <li><div>Попроси клієнта відкрити старий бот <b>13GramBot</b> і натиснути «Отримати фішки 🚀». Під QR-кодом буде рядок <b>«Ваш ID: …»</b>. Перепиши цей номер.</div></li>
+      <li><div>Потім «Мої фішки 👀». Бот покаже <b>баланс фішок</b>. Перепиши число.</div></li>
+      <li><div>Зручно: сфотографуй обидва екрани своїм телефоном, щоб нічого не переплутати.</div></li>
+    </ol>
+    <p class="dont">«Нараховано фішок: 33» у старому боті означає фішки за останню покупку, а не баланс. Баланс дивись лише в «Мої фішки 👀».</p>
+    <p class="do">Клієнт без фішок у старому боті: все одно переводимо, переносити просто нічого.</p>
+  </div>
+  <figure class="shot"><div class="marks"><img src="staryi-bot.webp" alt="Старий бот 13GramBot: QR-код, рядок «Ваш ID» і кнопка «Мої фішки»" width="960" height="1384">
+    <span class="m" style="--x:40%;--y:69.6%;--w:44%;--h:4.6%"><b>1</b></span>
+    <span class="m" style="--x:58.5%;--y:92.8%;--w:40%;--h:5%"><b>2</b></span></div>
+    <figcaption>1: «Ваш ID» під QR-кодом. 2: кнопка «Мої фішки 👀» показує баланс.</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="novyi"><div class="wrap">
+  <h2>Новий бот: реєстрація за 20 секунд</h2>
+  <p class="sub">Клієнт реєструється сам, зі свого телефона і свого Telegram.</p>
+  <div class="cols">
+    <div class="qr"><img src="qr-card.jpg" alt="QR-код нового бота @easygramus_bot" width="730" height="750">
+      <a href="https://t.me/easygramus_bot">t.me/easygramus_bot</a></div>
+    <div>
+    <ol class="steps">
+      <li><div>Покажи клієнту QR нового бота. Клієнт наводить на нього камеру свого телефона і відкриває посилання. Або дай посилання <span class="k">t.me/easygramus_bot</span>.</div></li>
+      <li><div>У боті «Старт», потім «📱 Поділитися номером».</div></li>
+      <li><div>«✅ Погоджуюсь, мені є 18». Бот одразу надішле карту з номером із 6 цифр.</div></li>
+      <li><div>Перепиши номер нової карти. Наступні покупки клієнт робить уже з нею: F9 «Дисконт», сканер зчитує карту з екрана телефона.</div></li>
+    </ol>
+    <p class="dont">Не реєструй клієнта зі свого телефона: карта має бути в Telegram самого клієнта.</p>
+    </div>
+  </div>
+  <div class="cols" style="margin-top:28px">
+    <div class="chat"><div class="mine">/start</div><div class="msg"><div class="bubble"><div class="txt"><b>Вітаємо у 13GRAM</b> 👋<br>Карта лояльності EASY SWAP прямо тут, у Telegram.<br><br><blockquote>🎯 Фішки з кожної покупки<br>💸 1 фішка = 1 ₴ знижки<br>🧾 Чеки та історія в одному місці</blockquote><br>Натисніть кнопку нижче, щоб отримати карту 👇</div></div><div class="reply"><div class="kbrow"><span class="rbtn">📱 Поділитися номером</span></div></div></div></div>
+    <div class="chat"><div class="mine">✅ Погоджуюсь, мені є 18</div><div class="msg"><div class="bubble"><div class="txt">🎉 <b>Готово! Ми знайшли вас у базі 13GRAM</b></div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div><div class="msg"><div class="bubble"><img class="pic" src="../gaid/card.png" alt="Картинка з бота"><div class="txt">💳 <b>Ваша карта · 000001</b><br>Покажіть штрихкод на касі або назвіть номер.</div></div><div class="reply"><div class="kbrow"><span class="rbtn">💳 Карта клієнта</span><span class="rbtn">🎯 Баланс фішок</span></div><div class="kbrow"><span class="rbtn">🧾 Історія покупок</span><span class="rbtn">📄 Останній чек</span></div></div></div></div>
+  </div>
+</div></section>
+
+<section id="zvit"><div class="wrap">
+  <h2>Що надіслати адміністратору</h2>
+  <p class="sub">Одне повідомлення на кожного клієнта. Адміністратор перенесе фішки вручну.</p>
+  <div class="cols"><div>
+    <p>Надішли адміністратору повідомлення за шаблоном і додай фото екрана «Мої фішки 👀» зі старого бота:</p>
+    <div class="template">Перехід у новий бот
+Старий ID: 409678757
+Фішок у старому боті: 120
+Нова карта: 000123
+Точка: ТРЦ Плазма</div>
+    <p style="margin-top:14px">Адміністратор знайде клієнта в боті за новою картою і нарахує фішки. Клієнт одразу отримає повідомлення в новому боті.</p>
+    <p class="do">Один клієнт, одне повідомлення. Так нічого не загубиться і не нарахується двічі.</p>
+    <p class="dont">Не обіцяй клієнту «бонус за перехід», якщо адміністратор його не оголошував: переносимо рівно баланс зі старого бота.</p>
+  </div>
+  <div class="chat"><div class="msg"><div class="bubble"><div class="txt">🎁 Вам нараховано <b>50</b> фішок!<br>Баланс: 118 фішок (1 фішка = 1 ₴ знижки).</div></div></div></div>
+  </div>
+</div></section>
+
+<section id="skazaty"><div class="wrap">
+  <h2>Що сказати клієнту</h2>
+  <p class="sub">Коротко і впевнено.</p>
+  <div class="say">
+    <p>«Старий бот скоро вимкнеться. Перейдімо в новий: це хвилина, і всі ваші фішки ми перенесемо».</p>
+    <p>«У новому боті карта прямо в Telegram, чек кожної покупки і історія. Брак повернемо без проблем, чек завжди у вас».</p>
+    <p>«Покажіть, будь ласка, „Мої фішки“ в старому боті, я запишу баланс».</p>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Часті ситуації</h2>
+  <p class="sub">Коротко, що робити.</p>
+  <dl class="faq">
+    <div><dt>Клієнт уже зареєстрований у новому боті</dt><dd>Новий бот напише «Ви вже зареєстровані». Візьми номер його карти в «💳 Карта клієнта» і надішли шаблон з ID і балансом зі старого бота.</dd></div>
+    <div><dt>Клієнт не може відкрити старий бот</dt><dd>Зареєструй його в новому боті і напиши адміністратору номер телефону клієнта та нову карту: адміністратор вирішить, скільки фішок перенести.</dd></div>
+    <div><dt>У старому боті 0 фішок</dt><dd>Переводимо все одно. Шаблон не потрібен, досить реєстрації в новому боті.</dd></div>
+    <div><dt>Клієнт поспішає</dt><dd>Хай зараз зареєструється за QR (20 секунд), а баланс зі старого бота покаже наступного разу.</dd></div>
+    <div><dt>Камера не читає QR</dt><dd>Хай знайде в пошуку Telegram <span class="k">@easygramus_bot</span> або відкриє посилання <span class="k">t.me/easygramus_bot</span>.</dd></div>
+  </dl>
+</div></section>
+
+</main>
+<footer><div class="wrap">Питання щодо переходу: адміністратор твого регіону. Повний гайд продавця: <a href="../gaid/" style="color:var(--link)">тут</a>. Числа в шаблоні для прикладу.</div></footer>
+
+</body>
+</html>
